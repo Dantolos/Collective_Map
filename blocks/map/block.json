@@ -1,0 +1,14 @@
+{
+     "name": "acf/map",
+     "title": "Map",
+     "description": "",
+     "style": [ "file:./map.css" ],
+     "category": "SUD Collective",
+     "icon": { "foreground": "#1582BE",  "src": "location-alt" },
+     "keywords": ["map", "teaser", "sud"],
+     "acf": {
+         "mode": "preview",
+         "renderTemplate": "./map.php"
+     },
+     "align": "full"
+}

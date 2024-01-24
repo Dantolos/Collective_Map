@@ -1,0 +1,107 @@
+svg image {
+     cursor: pointer;
+}
+
+.nodes circle {
+     fill: blue;
+}
+
+.links line {
+     stroke: grey;
+     stroke-width: 1px;
+}
+
+.sud-map-wrapper {
+     position: relative;
+
+}
+
+.sud-filter-container {
+     position: absolute;
+     padding: 10px 20px;
+     background-color: white;
+     border-radius: 20px;
+     left: 0;
+     right: 0;
+     margin: 5vh auto;
+     width: fit-content;
+     box-shadow: 5px 0px 6px 0px #B1A1CE;
+    -webkit-box-shadow: 0px 5px 6px 0px #B1A1CE;
+    display: flex;
+    justify-content: center;
+}
+
+select {
+     border: none;
+     background-color: rgba(148, 47, 109, 0.06);
+     padding: 10px 20px;
+     border-radius: 20px;
+}
+
+.map-container {
+     width: 100vw;
+     height: 80vh;
+     margin: 0 auto 0 auto;
+     background: unset;
+     background-image: url(https://collective.startupdays.ch/wp-content/uploads/2023/02/SUD_Collective-Background-big.png);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+}
+
+.tooltip {
+     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+     position: absolute;
+     background-color: white;
+     padding: 10px 25px 30px 25px;
+     border: 1px solid #cecece;
+     border-radius: 5px;
+     width: 500px;
+     cursor: zoom-out;
+}
+
+.tooltip-name {
+     font-size: 32px;
+     font-weight: bold;
+     color: #3a183b;
+}
+
+.tooltip-description {
+     font-size: 14px;
+     font-family: "Georgia", sans-serif;
+     padding: 5px 0 15px 0;
+}
+
+.tooltip-link {
+     background-color: #942F6D;
+     display: inline-block;
+     padding: 10px 30px;
+     border-radius: 3px;
+     color: white;
+     font-size: 23px;
+     font-family: "Georgia", sans-serif;
+}
+
+.color-main {
+     color: #942F6D;
+}
+
+.cta-position {
+     position: absolute;
+     bottom: 20px;
+     right: 20px;
+
+}
+
+.cta-button {
+     background-color: #942F6D;
+     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+     display: inline-block;
+     padding: 10px 30px;
+     border-radius: 3px;
+     color: white !important;
+     font-size: 23px;
+     font-family: "Georgia", sans-serif;
+}
+
