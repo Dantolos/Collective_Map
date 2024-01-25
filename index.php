@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Collective Map
  * Description: Interactive map of network members
- * Version: 1.01
+ * Version: 1.02
  * Author: Aaron Giaimo
  * Author URI: https://github.com/Dantolos
  */
@@ -12,13 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function collective_map_register_scripts() {
-     //$theme_version = wp_get_theme()->get( 'Version' );
-     //wp_enqueue_script( 'd3', 'https://cdn.jsdelivr.net/npm/d3@7', array(), '1.0', true );
-     //wp_enqueue_script( 'stimulus', 'https://unpkg.com/@hotwired/stimulus/dist/stimulus.js', array(), '1.0', true );
-     //wp_enqueue_script( 'app-js',  plugins_url( '/js/collectove_map_app.js', __FILE__ ), array('d3', 'stimulus'), '1.1', true );
 
-}
 add_action('admin_enqueue_scripts', 'collective_map_register_scripts');
 
 wp_register_script( 'd3-js',  'https://cdn.jsdelivr.net/npm/d3@7', array(), '1.1', true );
