@@ -13,7 +13,12 @@ svg image {
 
 .sud-map-wrapper {
      position: relative;
-
+     background-color: #ffffff;
+     background-color: #faf6f9;
+opacity: 1;
+background-image:  linear-gradient(#f7f1f4 2px, transparent 2px), linear-gradient(90deg, #f7f1f4 2px, transparent 2px), linear-gradient(#f7f1f4 1px, transparent 1px), linear-gradient(90deg, #f7f1f4 1px, #faf6f9 1px);
+background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
 .sud-filter-container {
@@ -33,10 +38,22 @@ svg image {
 
 select {
      border: none;
-     background-color: rgba(148, 47, 109, 0.06);
+     background-color: rgba(230, 220, 226, 0.06);
      padding: 10px 20px;
      border-radius: 20px;
+     border: 2px solid #e9cede;
      color: #942F6D;
+
+     background: url("data:image/svg+xml,<svg height='15px' width='15px' viewBox='0 0 16 16' fill='942F6D' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+     background-position: calc(100% - .75rem) center !important;
+     -moz-appearance:none !important;
+     -webkit-appearance: none !important; 
+     appearance: none !important;
+     padding-right: 2.2rem !important;
+}
+select:focus {
+     border: 2px solid #942F6D;
+     box-shadow: none;
 }
 
 .map-container {
@@ -44,11 +61,7 @@ select {
      height: 80vh;
      margin: 0 auto 0 auto;
      background: unset;
-     background-image: url(https://collective.startupdays.ch/wp-content/uploads/2023/02/SUD_Collective-Background-big.png);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-position: center;
+   
 }
 
 .tooltip {
