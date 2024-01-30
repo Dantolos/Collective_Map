@@ -1,4 +1,4 @@
-console.log('asfkj')
+
 export class CollectiveMap {
 
   constructor(htmlElement) {
@@ -47,8 +47,8 @@ export class CollectiveMap {
     // NOTE: Uncomment to list all dataset groups in console
     // this.listDatasetGroups(data);
 
-    let imageWidth = 100;
-    let imageHeight = 100;
+    let imageWidth = 160;
+    let imageHeight = 130;
 
     let collisionRadius = Math.sqrt(Math.pow(imageWidth / 2, 2) + Math.pow(imageHeight / 2, 2));
 
@@ -69,8 +69,8 @@ export class CollectiveMap {
         .data(nodes)
         .enter().append("image")
             .attr("xlink:href", d => d.logo)
-            .attr("height", 125)
-            .attr("width", 125)
+            .attr("height", 105)
+            .attr("width", 175)
             .attr("data-target", "map.nodes")
             .on("click", (event, d) => { 
               event.stopPropagation();
@@ -79,9 +79,20 @@ export class CollectiveMap {
               console.log(event)
               tooltip.style.removeProperty("display");
               tooltip.style.opacity = "1";
-              tooltip.style.left = (event.pageX + 10 + "px")
-              tooltip.style.top = (event.pageY + 10 + "px")
-              tooltip.querySelector('[data-target="name"]').textContent = d.name
+
+           
+              event.target.style.transform = 'scale(1.1)';
+              setTimeout(() => {  
+                event.target.style.transform = 'scale(1)';
+              }, 200);
+              //Fixed position of tooltips
+              //tooltip.style.left = (event.pageX + 10 + "px")
+              //tooltip.style.top = (event.pageY + 10 + "px")
+              tooltip.style.left = "0px"
+              tooltip.style.bottom = "0px"
+            
+              tooltip.querySelector('[data-target="logo"]').src = d.logo
+              //tooltip.querySelector('[data-target="name"]').textContent = d.name
               tooltip.querySelector('[data-target="description"]').textContent = d.description
               tooltip.querySelector('[data-target="link"]').href = d.website
             });

@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Collective Map
  * Description: Interactive map of network members
- * Version: 1.02
+ * Version: 1.03
  * Author: Aaron Giaimo
  * Author URI: https://github.com/Dantolos
  */
@@ -22,7 +22,7 @@ wp_register_script( 'stimulus-js',  'https://unpkg.com/@hotwired/stimulus/dist/s
 wp_enqueue_script( 'stimulus-js' );
 
 wp_register_script( 'app-js',  plugins_url( '/js/collective_map_app.js', __FILE__ ), array('d3-js', 'stimulus-js'), '1.1', true );
-wp_enqueue_script('app-js');
+wp_enqueue_script( 'app-js' );
 
 add_filter("script_loader_tag", "add_module_to_my_script", 10, 3);
 function add_module_to_my_script($tag, $handle, $src)

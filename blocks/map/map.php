@@ -6,7 +6,7 @@
 <div data-controller="map" class="sud-map-wrapper">
 
      <div class="sud-filter-container">
-          <select data-action="map#filterMap">
+          <select data-action="map#filterMap" >
                <option value="everything">Alles</option>
                <option value="funding">Funding</option>
                <option value="business-skills">Business Skills</option>
@@ -21,6 +21,7 @@
 
      <div id="d3map" class="map-container" data-map-target="mapContainer">
           <div data-target="tooltip" class="tooltip" style="display: none;">
+               <img data-target="logo" class="tooltip-logo" style="max-width:200px;max-height:100px;margin:40px 0 20px;"/>
                <h1 data-target="name" class="tooltip-name"></h1>
                <p data-target="description" class="tooltip-description"></p>
                <a data-target="link" class="tooltip-link" href="" target="_blank">Website</a>
