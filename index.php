@@ -3,9 +3,7 @@
 /**
  * Plugin Name: Collective Map
  * Description: Interactive map of network members
- * Version: 1.04
- * Author: Aaron Giaimo
- * Author URI: https://github.com/Dantolos
+ * Version: 1.05
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
