@@ -2,7 +2,21 @@
      
      $terms = get_terms( array(
           'taxonomy'   => 'ressources',
-          'hide_empty' => true,
+          'hide_empty' => true, 
+          'orderby' => 'meta_value_num',
+          'order' => 'ASC',
+          'meta_query' => array(
+               'relation' => 'OR',
+               array(
+                    'key' => 'partner_order',
+                    'compare' => 'NOT EXISTS'
+               ),
+               array(
+                    'key' => 'partner_order',
+                    'value' => 0,
+                    'compare' => '>='
+               )
+          ),
      ) ); 
 
 ?>
@@ -12,7 +26,7 @@
 
      <div class="sud-filter-container">
           <select data-action="map#filterMap" >
-               <option value="" disabled selected>What are you looking for</option>
+               <option value="" disabled selected>What are you looking for?</option>
                <option value="everything">Show all</option>
                <?php foreach ($terms as $term) : ?>
                     <option value="<?= $term->slug; ?>"><?= $term->name ?></option>
