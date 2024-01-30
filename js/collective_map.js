@@ -17,7 +17,7 @@ export class CollectiveMap {
   }
 
   fetchData() {
-    fetch('https://collective.startupdays.ch/wp-json/sud/v1/partner')
+    fetch('https://collective.startupdays.ch/wp-json/sud/v1/partner?map')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

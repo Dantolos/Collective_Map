@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Collective Map
  * Description: Interactive map of network members
- * Version: 1.03
+ * Version: 1.04
  * Author: Aaron Giaimo
  * Author URI: https://github.com/Dantolos
  */
@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$plugin_version = get_file_data(__FILE__, array('Version' => 'Version'), false)['Version'];
 
-add_action('admin_enqueue_scripts', 'collective_map_register_scripts');
 
 wp_register_script( 'd3-js',  'https://cdn.jsdelivr.net/npm/d3@7', array(), '1.1', true );
 wp_enqueue_script( 'd3-js' );
@@ -21,7 +21,7 @@ wp_enqueue_script( 'd3-js' );
 wp_register_script( 'stimulus-js',  'https://unpkg.com/@hotwired/stimulus/dist/stimulus.js', array(), '1.1', true );
 wp_enqueue_script( 'stimulus-js' );
 
-wp_register_script( 'app-js',  plugins_url( '/js/collective_map_app.js', __FILE__ ), array('d3-js', 'stimulus-js'), '1.1', true );
+wp_register_script( 'app-js',  plugins_url( '/js/collective_map_app.js', __FILE__ ), array('d3-js', 'stimulus-js'), $plugin_version, true );
 wp_enqueue_script( 'app-js' );
 
 add_filter("script_loader_tag", "add_module_to_my_script", 10, 3);
@@ -36,7 +36,6 @@ function add_module_to_my_script($tag, $handle, $src)
 
 
 require_once(plugin_dir_path( __FILE__ ).'/blocks/blocks-register.php');
- 
-require_once(plugin_dir_path( __FILE__ ).'/blocks/blocks-register.php');
+  
 
 ?>

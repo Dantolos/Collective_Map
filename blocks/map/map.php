@@ -1,5 +1,10 @@
 <?php 
- 
+     
+     $terms = get_terms( array(
+          'taxonomy'   => 'ressources',
+          'hide_empty' => true,
+     ) ); 
+
 ?>
 
 
@@ -7,14 +12,11 @@
 
      <div class="sud-filter-container">
           <select data-action="map#filterMap" >
-               <option value="everything">Alles</option>
-               <option value="funding">Funding</option>
-               <option value="business-skills">Business Skills</option>
-               <option value="pitching-skills">Pitching Skills</option>
-               <option value="community">Community</option>
-               <option value="inspiration">Inspiration</option>
-               <option value="finance-skills">Finance Skills</option>
-               <option value="tech-skills">Tech Skills</option>
+               <option value="" disabled selected>What are you looking for</option>
+               <option value="everything">Show all</option>
+               <?php foreach ($terms as $term) : ?>
+                    <option value="<?= $term->slug; ?>"><?= $term->name ?></option>
+               <?php endforeach; ?> 
           </select>
      </div>
      <hr>
