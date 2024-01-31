@@ -42,6 +42,12 @@
                <p data-target="description" class="tooltip-description"></p>
                <a data-target="link" class="tooltip-link" href="" target="_blank">Website</a>
           </div>
+
+          <div class="interaction-buttons">
+            <button id="zoom_in">+</button>
+            <button id="zoom_out">-</button>
+          </div>
+
           <?php if(false) { ?>
           <div class="cta-position">
                <a href="#" target="_blank" class="cta-button">CALL TO ACTION</a>

@@ -15,10 +15,10 @@ svg image {
      position: relative;
      background-color: #ffffff;
      background-color: #faf6f9;
-opacity: 1;
-background-image:  linear-gradient(#f7f1f4 2px, transparent 2px), linear-gradient(90deg, #f7f1f4 2px, transparent 2px), linear-gradient(#f7f1f4 1px, transparent 1px), linear-gradient(90deg, #f7f1f4 1px, #faf6f9 1px);
-background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+     opacity: 1;
+     background-image:  linear-gradient(#f7f1f4 2px, transparent 2px), linear-gradient(90deg, #f7f1f4 2px, transparent 2px), linear-gradient(#f7f1f4 1px, transparent 1px), linear-gradient(90deg, #f7f1f4 1px, #faf6f9 1px);
+     background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+     background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
 .sud-filter-container {
@@ -101,6 +101,22 @@ select:focus {
      color: #942F6D;
 }
 
+.interaction-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.interaction-buttons button {
+    background-color: white;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
 .cta-position {
      position: absolute;
      bottom: 20px;
@@ -118,4 +134,3 @@ select:focus {
      font-size: 23px;
      font-family: "Georgia", sans-serif;
 }
-
