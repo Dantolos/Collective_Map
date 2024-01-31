@@ -111,7 +111,6 @@ export class CollectiveMap {
     let svg = d3.select("svg")
       .attr("width", "100%")
       .attr("height", "100%")
-      .style("background-color", "#eeeeee")
       .call(zoom)
       .on("dblclick.zoom", null);
 

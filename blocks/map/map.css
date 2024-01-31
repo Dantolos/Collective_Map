@@ -103,12 +103,15 @@ select:focus {
 
 .interaction-buttons {
     position: absolute;
-    top: 20px;
+    top: 0;
+    bottom:0;
+    height: 100px;
+    margin: auto;
     right: 20px;
 }
 
 .interaction-buttons button {
-    background-color: white;
+    background-color: #942F6D;
     border: 1px solid #cecece;
     border-radius: 5px;
     width: 50px;
