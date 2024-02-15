@@ -73,6 +73,7 @@ select:focus {
      border-radius: 5px;
      width: 500px;
      cursor: zoom-out;
+     max-width: 100vw;
 }
 
 .tooltip-name {

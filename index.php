@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Collective Map
  * Description: Interactive map of network members
- * Version: 1.09
+ * Version: 1.10
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
